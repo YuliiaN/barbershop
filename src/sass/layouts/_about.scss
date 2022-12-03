@@ -1,0 +1,32 @@
+.about__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about__title {
+  font-family: $secondary-font-family;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: calc(33 / 28);
+  letter-spacing: 0.05em;
+  color: $title-color;
+}
+
+.about__first-text,
+.about__second-text {
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  letter-spacing: 0.02em;
+  color: $second-text-color;
+}
+
+.about__second-text {
+  font-size: 14px;
+}
+
+.about__btn {
+  width: 160px;
+  height: 40px;
+  margin-top: 40px;
+}

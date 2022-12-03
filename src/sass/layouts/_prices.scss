@@ -1,0 +1,90 @@
+.prices {
+  position: relative;
+  text-align: center;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  background-image: url('../images/bcg-slider/bcg2-mob@1x-min.jpg');
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/bcg-slider/bcg2-mob@2x-min.jpg');
+  }
+}
+
+// dark bcg layer
+
+.prices::after {
+  position: absolute;
+  content: '';
+  background-color: #111319;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.prices__container {
+  position: relative;
+  z-index: 1;
+}
+
+// prices content
+
+.prices__title {
+  margin-top: 20px;
+  margin-bottom: 44px;
+  font-size: 40px;
+  color: $header-text-color;
+  text-align: start;
+}
+
+.prices__list-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 40px;
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.prices__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  font-size: 14px;
+  line-height: calc(20 / 14);
+  letter-spacing: 0.02em;
+  color: $first-text-color;
+}
+
+.prices__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.prices__line {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+}
+
+.prices__name,
+.prices__price {
+  flex-shrink: 0;
+}
+
+.prices__btn {
+  width: 160px;
+  height: 40px;
+  margin-top: 44px;
+
+  color: $header-text-color;
+}

@@ -1,0 +1,22 @@
+.container {
+  margin: 0 auto;
+  outline: 1px solid orangered;
+
+  @include mq(mob) {
+    width: 480px;
+    padding-left: 31px;
+    padding-right: 31px;
+  }
+
+  @include mq(tab) {
+    width: 768px;
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+
+  @include mq(desk) {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
