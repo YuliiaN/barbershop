@@ -1,2 +1,19 @@
-@import './common';
-@import './example';
+@import './utils/reset';
+@import './utils/mixin';
+@import './utils/variables';
+@import './utils/visually-hidden';
+
+@import './components/common';
+@import './components/btn';
+@import './components/container';
+
+@import './layouts/header';
+@import './layouts/mob-menu';
+@import './layouts/hero';
+@import './layouts/about';
+@import './layouts/prices';
+@import './layouts/advantages';
+@import './layouts/barbers';
+@import './layouts/gallery';
+@import './layouts/contacts';
+@import './layouts/footer';
