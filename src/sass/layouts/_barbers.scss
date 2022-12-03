@@ -1,0 +1,81 @@
+.barbers {
+  background-color: $bcg-barbers-color;
+}
+
+.barbers__subtitle {
+  margin-bottom: 20px;
+}
+
+.barbers__title {
+  margin-bottom: 44px;
+  color: $title-color;
+}
+
+// barbers list
+
+.barbers__list {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.barbers__item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.barbers__item-wrap {
+  text-align: center;
+}
+
+.barbers__pic {
+  width: 100%;
+}
+
+.barbers__name {
+  line-height: calc(25 / 18);
+  letter-spacing: 0.02em;
+  color: $third-text-color;
+}
+
+.barbers__position {
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  letter-spacing: 0.02em;
+  color: $accent-color;
+}
+
+// sm list
+
+.barbers__sm-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.barbers__sm-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  background-color: $bcg-main-color;
+  border-radius: 50%;
+}
+
+.barbers__sm-link {
+  color: $third-text-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.barbers__sm-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
