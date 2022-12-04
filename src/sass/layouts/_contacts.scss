@@ -1,0 +1,94 @@
+.contacts {
+  position: relative;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  background-image: url('../images/contacts/bcg-contacts-mob@1x-min.jpg');
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/contacts/bcg-contacts-mob@2x-min.jpg');
+  }
+}
+
+// dark bcg layer
+
+.contacts::after {
+  position: absolute;
+  content: '';
+  background-color: #111319;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.contacts__container {
+  position: relative;
+  z-index: 1;
+}
+
+// contacts content
+
+.contacts__title {
+  margin-bottom: 40px;
+  color: $header-text-color;
+  text-align: center;
+}
+
+// address list
+
+.address__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 44px;
+}
+
+.address__link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  font-style: normal;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: $first-text-color;
+}
+
+.address__icon {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  fill: transparent;
+}
+
+.address__address {
+  font-weight: 700;
+}
+
+.address__mail {
+  text-decoration: underline;
+}
+
+// text
+
+.contacts__subtitle {
+  margin-bottom: 20px;
+  color: $header-text-color;
+
+  &::before {
+    background-color: rgba(157, 164, 189, 0.4);
+  }
+}
+
+.contacts__text {
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: $first-text-color;
+}

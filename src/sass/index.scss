@@ -1,15 +1,24 @@
+// utils
+
 @import './utils/reset';
 @import './utils/mixin';
 @import './utils/variables';
 @import './utils/visually-hidden';
 
+// components
 @import './components/common';
 @import './components/btn';
+
 @import './components/container';
 @import './components/section';
+
+@import './components/no-scroll';
 @import './components/backdrop';
+
 @import './components/subtitle';
 @import './components/title';
+
+// layouts
 
 @import './layouts/header';
 @import './layouts/mob-menu';
@@ -19,5 +28,6 @@
 @import './layouts/advantages';
 @import './layouts/barbers';
 @import './layouts/gallery';
+@import './layouts/booking';
 @import './layouts/contacts';
 @import './layouts/footer';

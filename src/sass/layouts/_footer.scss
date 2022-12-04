@@ -1,0 +1,36 @@
+.footer {
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+.footer__sm-list {
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.footer__sm-item {
+  position: static;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  &:first-child::before {
+    position: static;
+  }
+}
+
+.footer__sm-link {
+  font-size: 11px;
+}
+
+.footer__copy {
+  margin-top: 20px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+  color: $first-text-color;
+  text-align: start;
+}

@@ -68,13 +68,13 @@
 
 // mob menu social media
 
-.header__sm-list {
+.sm-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.header__sm-item {
+.sm-item {
   position: relative;
   left: 100px;
 
@@ -89,7 +89,7 @@
   }
 }
 
-.header__sm-link {
+.sm-link {
   font-weight: 600;
   font-size: 14px;
   line-height: calc(19 / 14);
