@@ -2,6 +2,13 @@
   background-color: $bcg-barbers-color;
 }
 
+.barbers__wrap {
+  @include mq(tab-only) {
+    width: 450px;
+    margin: 0 auto;
+  }
+}
+
 .barbers__subtitle {
   margin-bottom: 20px;
 }
@@ -81,6 +88,10 @@
 }
 
 .barbers__sm-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   color: $third-text-color;
 
   &:hover,
@@ -93,4 +104,6 @@
   width: 20px;
   height: 20px;
   fill: currentColor;
+
+  @include transition(color);
 }

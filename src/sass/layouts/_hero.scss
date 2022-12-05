@@ -1,22 +1,46 @@
 .hero {
+  @include mq(mob-only) {
+    background-image: url('../images/bcg-slider/bcg-mob@1x-min.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/bcg-slider/bcg-mob@2x-min.jpg');
+    }
+  }
+}
+
+.hero__container {
+  @include mq(tab) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 29px;
+  }
+}
+
+// hero content
+
+.hero__content-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
   padding-top: 208px;
   padding-bottom: 209px;
 
-  background-image: url('../images/bcg-slider/bcg-mob@1x-min.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
-  @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url('../images/bcg-slider/bcg-mob@2x-min.jpg');
-  }
-
   @include mq(tab) {
-    padding-top: 372px;
+    flex-grow: 1;
+    padding-left: 100px;
+    padding-top: 272px;
     padding-bottom: 237px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
     background-image: url('../images/bcg-slider/bcg-tablet@1x-min.jpg');
 
@@ -42,10 +66,10 @@
   }
 }
 
-.hero__wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.hero__text-wrap {
+  @include mq(desk) {
+    max-width: 444px;
+  }
 }
 
 .hero__title {
@@ -72,4 +96,39 @@
     font-size: 18px;
     line-height: calc(30 / 18);
   }
+}
+
+// hero sm
+
+.hero__sm {
+  align-self: flex-end;
+  width: 90px;
+  margin-bottom: 80px;
+
+  @include mq(mob-only) {
+    display: none;
+  }
+}
+
+.hero__sm-list {
+  @include mq(tab) {
+    flex-direction: row;
+    gap: 40px;
+    transform: rotate(-90deg);
+  }
+}
+
+.hero__sm-item {
+  position: static;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  &:first-child::before {
+    position: static;
+  }
+}
+
+.hero__sm-link {
+  font-size: 11px;
 }

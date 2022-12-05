@@ -52,6 +52,8 @@
   letter-spacing: 0.1em;
   color: $bcg-main-color;
 
+  @include transition(border);
+
   &::placeholder {
     font-weight: 600;
     font-size: 11px;
@@ -59,6 +61,8 @@
     letter-spacing: 0.1em;
     color: rgba(157, 164, 189, 0.4);
     text-transform: uppercase;
+
+    @include transition(color);
   }
 
   &:hover::placeholder {

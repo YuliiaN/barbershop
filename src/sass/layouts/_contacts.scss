@@ -102,6 +102,13 @@
   line-height: calc(30 / 18);
   letter-spacing: 0.02em;
   color: $first-text-color;
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $header-text-color;
+  }
 }
 
 .address__icon {

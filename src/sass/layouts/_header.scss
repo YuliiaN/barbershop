@@ -10,6 +10,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include mq(desk) {
+    gap: 131px;
+  }
 }
 
 // logo
@@ -22,14 +26,44 @@
   width: 69px;
   height: 55.4px;
   fill: currentColor;
+
+  @include mq(tab) {
+    color: $third-text-color;
+  }
 }
 
 // navigation
+
+.header__wrap {
+  @include mq(tab) {
+    display: flex;
+    gap: 46px;
+  }
+
+  @include mq(desk) {
+    gap: 254px;
+  }
+}
 
 .header__nav-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @include mq(tab) {
+    flex-direction: row;
+    gap: 20.5px;
+  }
+
+  @include mq(desk) {
+    gap: 30px;
+  }
+}
+
+.header__nav-item {
+  @include mq(tab) {
+    padding: 12px 0;
+  }
 }
 
 .header__nav-link {
@@ -44,6 +78,13 @@
   &:focus {
     color: $accent-color;
   }
+
+  @include mq(tab) {
+    padding: 12px 0;
+    font-size: 12px;
+    line-height: calc(16.34 / 12);
+    color: $header-text-color;
+  }
 }
 
 // contacts
@@ -52,6 +93,17 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @include mq(tab) {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+
+  @include mq(desk) {
+    flex-direction: row;
+    gap: 43px;
+  }
 }
 
 .header__contacts-tel {
@@ -59,40 +111,35 @@
   line-height: calc(25 / 18);
   letter-spacing: 0.1em;
   color: $third-text-color;
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  @include mq(tab) {
+    font-size: 12px;
+    line-height: calc(16.34 / 12);
+    color: $header-text-color;
+  }
 }
 
 .header__contacts-btn {
   width: 194px;
   height: 40px;
-}
 
-// mob menu social media
-
-.sm-list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.sm-item {
-  position: relative;
-  left: 100px;
-
-  &:first-child::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: -100px;
-    width: 60px;
-    height: 1px;
-    background-color: $third-text-color;
+  @include mq(tab) {
+    width: 164px;
+    color: $header-text-color;
   }
 }
 
-.sm-link {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: calc(19 / 14);
-  letter-spacing: 0.2em;
-  color: $third-text-color;
+// header sm
+
+.header__sm {
+  @include mq(tab) {
+    display: none;
+  }
 }
