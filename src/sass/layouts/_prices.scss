@@ -14,6 +14,28 @@
     (min-resolution: 2dppx) {
     background-image: url('../images/bcg-slider/bcg2-mob@2x-min.jpg');
   }
+
+  @include mq(tab) {
+    background-image: url('../images/bcg-slider/bcg2-tablet@1x-min.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/bcg-slider/bcg2-tablet@2x-min.jpg');
+    }
+  }
+
+  @include mq(desk) {
+    background-image: url('../images/bcg-slider/bcg2-desk@1x-min.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/bcg-slider/bcg2-desk@2x-min.jpg');
+    }
+  }
 }
 
 // dark bcg layer
@@ -50,6 +72,17 @@
   gap: 20px;
   padding: 30px 40px;
   background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+
+  @include mq(tab) {
+    padding: 32px 40px;
+  }
+
+  @include mq(desk) {
+    flex-direction: row;
+    gap: 30px;
+    padding: 0;
+    background: none;
+  }
 }
 
 .prices__list {
@@ -61,6 +94,32 @@
   line-height: calc(20 / 14);
   letter-spacing: 0.02em;
   color: $first-text-color;
+
+  @include mq(tab) {
+    font-size: 18px;
+    line-height: calc(30 / 18);
+  }
+
+  @include mq(desk) {
+    width: calc((100% - 30px) / 2);
+    padding: 30px 20px;
+
+    &_first {
+      background: linear-gradient(
+        180deg,
+        #171a24 0%,
+        rgba(23, 26, 36, 0.2) 100%
+      );
+    }
+
+    &_second {
+      background: linear-gradient(
+        180deg,
+        #090b13 0%,
+        rgba(9, 11, 19, 0.2) 100%
+      );
+    }
+  }
 }
 
 .prices__item {

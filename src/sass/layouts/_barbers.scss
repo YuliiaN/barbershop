@@ -16,24 +16,39 @@
 .barbers__list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 64px;
+
+  @include mq(desk) {
+    flex-direction: row;
+    gap: 30px;
+  }
 }
 
 .barbers__item {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
+
+  width: 418px;
+
+  @include mq(tab) {
+    width: 450px;
+  }
+
+  @include mq(desk) {
+    width: 370px;
+  }
 }
 
 .barbers__item-wrap {
   text-align: center;
 }
 
-.barbers__pic {
-  width: 100%;
-}
-
 .barbers__name {
+  margin-bottom: 8px;
+
   line-height: calc(25 / 18);
   letter-spacing: 0.02em;
   color: $third-text-color;

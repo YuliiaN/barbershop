@@ -1,7 +1,23 @@
 .footer {
   padding-top: 44px;
   padding-bottom: 44px;
+
+  @include mq(tab) {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
 }
+
+.footer__container {
+  @include mq(tab) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+// sm list
 
 .footer__sm-list {
   flex-direction: row;
@@ -24,6 +40,8 @@
   font-size: 11px;
 }
 
+// text
+
 .footer__copy {
   margin-top: 20px;
 
@@ -33,4 +51,8 @@
   letter-spacing: 0.2em;
   color: $first-text-color;
   text-align: start;
+
+  @include mq(tab) {
+    margin-top: 0;
+  }
 }

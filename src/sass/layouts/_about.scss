@@ -1,5 +1,10 @@
 .about__wrap {
   display: flex;
+  gap: 30px;
+}
+
+.about__text {
+  display: flex;
   flex-direction: column;
   gap: 20px;
 }
@@ -28,5 +33,39 @@
 .about__btn {
   width: 160px;
   height: 40px;
-  margin-top: 40px;
+  margin-top: 20px;
+
+  @include mq(tab) {
+    margin-top: 57px;
+  }
+
+  @include mq(desk) {
+    margin-top: 22px;
+  }
+}
+
+// about images
+
+.about__pictures {
+  @include mq(mob-only) {
+    display: none;
+  }
+
+  @include mq(tab) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  @include mq(desk) {
+    flex-direction: row;
+  }
+}
+
+.about__pic {
+  width: 330px;
+
+  @include mq(desk) {
+    width: 270px;
+  }
 }

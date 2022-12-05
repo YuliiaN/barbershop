@@ -1,11 +1,15 @@
 .booking {
   background-color: $bcg-contacts-color;
-  text-align: center;
 }
 
 .booking__title {
   margin-bottom: 44px;
   color: $bcg-main-color;
+  text-align: center;
+
+  @include mq(tab) {
+    text-align: start;
+  }
 }
 
 // form
@@ -13,10 +17,28 @@
 .booking__form {
   display: flex;
   flex-direction: column;
-  gap: 44px;
 }
 
-.booking__input {
+.booking__label {
+  @include mq(tab) {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+.booking__input-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  margin-bottom: 44px;
+
+  @include mq(tab) {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+.booking__input,
+.booking__comment {
   width: 100%;
   padding-bottom: 8px;
 
@@ -54,14 +76,20 @@
 .booking__comment {
   resize: none;
   height: 76px;
+  margin-bottom: 44px;
 }
 
 // btn
 
 .booking__btn {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 160px;
   height: 40px;
 
   color: $bcg-main-color;
+
+  @include mq(tab) {
+    margin-left: 0;
+  }
 }

@@ -1,3 +1,19 @@
+.advantages__container {
+  @include mq(desk) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 130px;
+  }
+}
+
+// advantages text
+
+.advantages__text-wrap {
+  @include mq(tab) {
+    max-width: 500px;
+  }
+}
+
 .advantages__subtitle {
   margin-bottom: 20px;
 }
@@ -8,27 +24,31 @@
 }
 
 .advantages__text {
-  margin-bottom: 79px;
+  margin-bottom: 44px;
 
   font-size: 18px;
   line-height: calc(30 / 18);
   letter-spacing: 0.02em;
   color: $second-text-color;
+
+  @include mq(desk) {
+    margin-bottom: 0;
+  }
 }
 
-.advantages__list-wrap {
-  display: flex;
-  gap: 30px;
-}
+// advantages list
 
 .advantages__list {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  flex-wrap: wrap;
 
-  &_first {
-    position: relative;
-    top: -35px;
+  @include mq(tab) {
+    margin-left: auto;
+    width: 450px;
+  }
+
+  @include mq(desk) {
+    width: 370px;
   }
 }
 
@@ -45,6 +65,24 @@
 
   color: $third-text-color;
   text-align: center;
+
+  @include mq(tab) {
+    width: 210px;
+    padding: 20px 44px;
+  }
+
+  @include mq(desk) {
+    width: 170px;
+    padding: 20px 24px;
+  }
+}
+
+.advantages__item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.advantages__item:nth-child(even) {
+  margin-top: 30px;
 }
 
 .item__amount {
