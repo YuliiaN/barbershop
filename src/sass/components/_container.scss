@@ -1,6 +1,5 @@
 .container {
   margin: 0 auto;
-  outline: 1px solid orangered;
 
   @include mq(mob) {
     width: 480px;
